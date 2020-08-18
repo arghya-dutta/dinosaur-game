@@ -20,20 +20,20 @@ class Game extends Phaser.Scene {
 
   create(data) {
     // this.add.image(400 , 300, 'logo');
-    this.w_key = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
-    this.d_key = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
-    this.a_key = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
+    this.w_key = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
+    this.d_key = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
+    this.a_key = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
     this.space_key = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
     this.meatsEaten =0;
-    this.score = 0;
+    //this.score = 0;
 
-    this.scoreText = this.add.text(16, 16, 'Meats eaten: 0', { fontSize: '32px', fill: '#000' })
+    
     this.addMap();
 
     this.addDino();
 
     this.addMeat();
-
+    this.scoreText = this.add.text(16, 16, 'Meats eaten: 0', { fontSize: '32px', fill: '#000' })
     this.cameras.main.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
  
   }
@@ -117,14 +117,15 @@ class Game extends Phaser.Scene {
       if(meat.visible == true){
         meat.show = false;
         meat.visible = false;
-        this.score += 10;
-        this.scoreText.text = 'Meats eaten: ' +this.score;
-        this.meatsEaten +=1;
-        if(meat.rotten == 0) {
+        //this.score = this.score+ 10;
+        this.meatsEaten = this.meatsEaten+1;
+        this.scoreText.text = 'Meats eaten: ' +this.meatsEaten;
+        
+        /*if(meat.rotten == 0) {
           this.hero.speedUpDino();
         } else {
           this.hero.slowDownDino();
-        }
+        }*/
         console.log("meatsEaten "+this.meatsEaten);
       }
        
@@ -139,7 +140,7 @@ class Game extends Phaser.Scene {
 
   update(time, delta) {
     const cameraBottom = this.cameras.main.getWorldPoint(0, this.cameras.main.height).y;
-if(this.meatsEaten %10 ===1){
+if(this.meatsEaten %14 ===0){
   this.meatGroup.children.iterate(meat => {
     this.reCreatemeats(meat);
   });
@@ -147,9 +148,9 @@ if(this.meatsEaten %10 ===1){
 }
     if (this.hero.isDead() && this.hero.getBounds().top > cameraBottom + 100) {
       this.hero.destroy();
-      this.score = 0;
+      //this.score = 0;
       this.meatsEaten = 0;
-      this.scoreText.text = 'Meats eaten: ' +this.score;
+      this.scoreText.text = 'Meats eaten: ' +this.meatsEaten;
       this.addDino();
       this.meatGroup.children.iterate(meat => {
         this.reCreatemeats(meat);
