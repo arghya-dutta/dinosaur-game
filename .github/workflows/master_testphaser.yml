@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'testphaser'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2a26c29f1d5b4f4eb57f167d80e6bc35 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6575c7e34cc840588af90c53fb62a753 }}
         package: .
