@@ -7,7 +7,7 @@ export default {
   backgroundColor: '#40157d',
   scale: {
     width: 700,
-    height: 500,
+    height: 450,
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
@@ -19,10 +19,10 @@ export default {
     arcade :{ 
       gravity:{y:250},
       
-      /*debug: true,
-      debugShowVelocity: true,
-      debugShowBody: true,
-      debugShowStaticBody: true*/
+      //debug: true,
+      //debugShowVelocity: true,
+      //debugShowBody: true,
+      //debugShowStaticBody: true
     }
   },
 };

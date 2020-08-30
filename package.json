@@ -8,7 +8,7 @@
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jed Hastwell",
+  "author": "Arghya Dutta",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.8.3",

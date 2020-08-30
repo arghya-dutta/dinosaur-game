@@ -38,8 +38,8 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":87.241649455167,
-                 "y":377.545758849085
+                 "x":87.2416,
+                 "y":377.546
                 }, 
                 {
                  "gid":7,
@@ -347,7 +347,7 @@
                  "id":50,
                  "name":"",
                  "rotation":0,
-                 "type":"",
+                 "type":"waves",
                  "visible":true,
                  "width":32,
                  "x":768,
