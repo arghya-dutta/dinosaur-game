@@ -1,5 +1,5 @@
-# Phaser 3 + ES6 + Webpack Boilerplate
-A boilerplate project for creating games with Phaser3, ES6 and Webpack.
+# Phaser 3 + ES6 + Webpack 
+A small game project for creating games with Phaser3, ES6 and Webpack.
 
 ## Setup
 
@@ -9,7 +9,7 @@ Requires node.js and npm to be installed: https://nodejs.org/en/
 ### Download repo
 From your workspace directory run:
 
-`git clone https://github.com/jedhastwell/phaser3-es6-webpack-boilerplate.git`
+`git clone https://github.com/arghya-dutta/dinosaur-game.git`
 
 ### Install Dependencies
 From the project directory run:
